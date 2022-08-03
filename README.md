@@ -1,4 +1,4 @@
-# TudoList - Um app simple de To-do list
+# TudoList - Um app simples de To-do list
 
 <img src="assets/img/tudolist-home.png">
 
