@@ -6,7 +6,7 @@
 ### TECNOLOGIAS UTILIZADAS:
 PHP, HTML/CSS, JavaScript, Postgresql (com AWS).
 
-### COMO INSTÂNCIAR NA SUA MÁQUINA
+### COMO INSTANCIAR O PROJETO NA SUA MÁQUINA
 
 - Use o arquivo **database.sql** e gere um banco de dados na aplicação de banco de dados de sua preferência (preferencialmente PostgreSQL, pois a sintaxe pode causar dificuldade de geração de tabela usando outros Database Managers);
 
