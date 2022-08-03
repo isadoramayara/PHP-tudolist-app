@@ -12,4 +12,4 @@ PHP, HTML/CSS, JavaScript, Postgresql (com AWS).
 
 - Vá na pasta **app/helpers/db_connect.php** e coloque os dados do seu host;
 
-- Coloque os arquivos em um servidor **APACHE**
+- Coloque os arquivos em um servidor com **APACHE**
