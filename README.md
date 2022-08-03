@@ -13,3 +13,7 @@ PHP, HTML/CSS, JavaScript, Postgresql (com AWS).
 - Vá na pasta **app/helpers/db_connect.php** e coloque os dados do seu host;
 
 - Coloque os arquivos em um servidor com **APACHE**
+
+
+WEB VERSION: ~~https://lunular-chance.000webhostapp.com/~~
+(TRABALHO EM PROGRESSO, APENAS O SIGNUP/LOGIN FUNCIONAM POR ENQUANTO.)
