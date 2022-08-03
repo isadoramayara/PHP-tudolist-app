@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400&display=swap');
+@import url('header.css');
+@import url('popup-messages.css');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    font-family: 'Signika Negative', sans-serif;
+    background-color: #FEFBF6;
+}
+
+a {
+    text-decoration: none;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+}
+
+.form-article{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+    .form-article section{
+        height: 50%;
+    }
+    .form{
+        width: 25vw;
+    }
+        .form h2{
+            text-align: center;
+        }
+        .form input{
+            width: 100%;
+            height: 2rem;
+        }
+        .form input[type="submit"], .form button{
+            height: 3rem;
+            width: 35%;
+            background-color: #dd9c67;
+            border: none;
+            color: antiquewhite;
+            margin: 5% auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .5s ease-in-out;
+        }
+            .form input[type="submit"]:hover{
+                background-color: #bd773c;
+            }
+        .form textarea{
+            resize: none;
+            width: 100%;
+            height: 20vh;
+        }
+
+    .form label{
+        display: block;
+        margin: 2% auto;
+    }
+    .form label:nth-last-of-type(1){
+        text-align: center;
+    }

@@ -1,0 +1,1 @@
+const popupbox = document.querySelector('#popup-window');

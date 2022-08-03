@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400&display=swap');
+@import url('modal-window.css');
+@import url('header.css');
+@import url('popup-messages.css');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    font-family: 'Signika Negative', sans-serif;
+    background-color: #FEFBF6;
+    color: #3D3C42;
+}
+
+a {
+    text-decoration: none;
+}
+
+label{
+    display: block;
+}
+
+.table-container{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+    .table-header{
+        width: 25vw;
+        margin: 4rem 0;
+        display: table-header-group;
+        text-align: center;
+    }
+
+    .table-cell-content{
+        width: 25vw;
+        height: 65vh;
+        overflow-y: scroll;
+        border-radius: 15px;
+    }
+        .table-cell{
+            width: 22vw;
+            display: block;
+            position: relative;
+            padding: 10px;
+            margin: 15px auto;
+            border-radius: 20px;
+        }
+                .table-cell:nth-child(even)
+                {
+                    background-color: #cce6ee
+                }
+                .table-cell:nth-child(odd)
+                {
+                    background-color: #D8EBF1
+                }
+            .table-cell.plus-sign{
+                padding: 10px;
+                background-color: #9fd0df;
+                color: #72b1ce;
+                transition: .3s ease-in-out;
+            }
+                .table-cell.plus-sign:hover{
+                    color: #9fd0df;
+                    background-color: #72b1ce;
+                }
+            .table-cell p{
+                text-align: center;
+            }
+            .table-cell button{
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                border: 0;
+                cursor: pointer;
+            }
+            .cell-button{
+                width: 90%;
+                height: 10px;
+                position: absolute;
+                text-align: right;
+                opacity: 0;
+                transition: .3s ease-in-out;
+            }
+                .cell-button a{
+                    margin: 0 5px;
+                    color: midnightblue;
+                    cursor: pointer;
+                }
+               .table-cell:hover > .cell-button{
+                    opacity: 1;
+                }
+
+.go-back{
+    width: 100vw;
+    text-align: center;
+}
+
+    

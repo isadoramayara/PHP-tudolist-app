@@ -1,0 +1,29 @@
+header{
+    width: 100vw;
+    height: 8vh;
+    background-color: #8bb4c7;
+    position: fixed;
+    top: 0;
+    z-index: 4000;
+}
+    .navigation-bar{
+        padding: 0 5%;
+    }
+        .navigation-bar ul{
+            margin: 0;
+            right: 0;
+        }
+        .navigation-bar li{
+            display: inline-flex;
+            justify-content: center;
+            font-size: 100%;
+            width: 9%;
+            height: 50%;
+        }
+        .navigation-bar a{
+            color: #27627d;
+        }
+        .navigation-bar span{
+            font-size: 12px;
+            margin: 0 5px;
+        }

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400&display=swap');
+@import url('modal-window.css');
+@import url('popup-messages.css');
+@import url('header.css');
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Signika Negative', sans-serif;
+    background-color: #FEFBF6;
+    color: #3D3C42;
+}
+
+a {
+    text-decoration: none;
+}
+
+label{
+    display: block;
+}
+
+main {
+    padding: 3%;
+}
+
+.main-article{
+    margin: 4.5% 3%;
+}
+    .welcome-message{
+        text-align: center;
+    }
+        .welcome-message h1{
+            font-size: 3rem;
+            margin-bottom: 0;
+        }
+        .welcome-message p{
+            margin-bottom: 5%;
+        }
+
+.list-container{
+    display: flex;
+    width: 100%;
+}
+    .list-wrapper{
+        width: 100%;
+    }
+    .list-box{
+        width: 18vw;
+        height: 50vh;
+        margin: 2%;
+        padding: 2%;
+        text-overflow: break-word;
+        position: relative;
+        background-color: #9fd0df;
+        float: left;
+        border-radius: 20px;
+        transition: .3s ease-in-out;
+    }
+        .list-box:hover:not(.list-box:nth-of-type(1)){
+            transform: translateY(-10px);
+        }
+        .list-box .fa-plus{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            background-color: #9fd0df;
+            color: #72b1ce;
+            font-size: 6rem;
+            float: left;
+            transition: 0.3s ease-in-out;
+        }
+            .list-box .fa-plus:hover {
+                background-color: #72b1ce;
+                color: #9fd0df;
+                font-size: 8rem;
+            }
+        .list-box h2{
+            font-size: 23px;
+            text-align: center;
+            overflow-wrap: break-word;
+            overflow: hidden;
+        }
+        .list-box p{
+            font-size: 95%;
+            overflow-wrap: break-word;
+            overflow: hidden;
+        }
+            .description{
+                text-align: justify;
+                height: 50%;
+                max-height: 50%;
+            }
+            .list-box span{
+                font-weight: bolder;
+            }
+        .list-box a:not(.cell-button a){
+            display: flex;
+            margin: 10% 20%;
+            padding: .5rem .5rem;
+            justify-content: center;
+            text-transform: uppercase;
+            background-color: #72b1ce;
+            color: aliceblue;
+            border-radius: 10px;
+            transition: .3s ease-in-out;
+        }
+            .list-box a:hover:not(.cell-button a){
+                padding: .6rem .6rem;
+                margin: 9% 19%;
+            }
+        .cell-button{
+            width: 100%;
+            height: 10px;
+            position: absolute;
+            right: 3%;
+            opacity: 0;
+            color: #3D3C42;
+            transition: .3s ease-in-out;
+        }
+            .cell-button a{
+                cursor: pointer;
+                float: right;
+                display: inline-flex;
+                font-size: 15px;
+                border: none;
+                margin: 0 4%;
+                background-color: transparent;
+            }
+            .list-box:hover > .cell-button{
+                opacity: 1;
+            }
+            
+
