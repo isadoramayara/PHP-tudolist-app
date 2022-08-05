@@ -4,7 +4,8 @@
 
 
 ### TECNOLOGIAS UTILIZADAS:
-PHP, HTML/CSS, JavaScript, Postgresql (com AWS).
+No desenvolvimento: PHP, HTML/CSS, JavaScript, Postgresql (com AWS).
+Na produção: PHP, HTML/CSS, JavaScript, MySQL (com PHPMyAdmin).
 
 ### SITE DA APLICAÇÃO
 
