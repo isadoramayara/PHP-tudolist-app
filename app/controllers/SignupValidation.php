@@ -75,7 +75,7 @@ class SignUpValidation extends SignUpModel
     // Valida se o usuário colocou algum caractere inválido no nome
     protected function invalidNames()
     {
-        if(!preg_match("/^[a-zA-Z-' ]*$/", $this->first_name) &&
+        if(!preg_match("/^[a-zA-Z-' ]*$/", $this->first_name) ||
            !preg_match("/^[a-zA-Z-' ]*$/", $this->last_name))
         {
             $validName = false;
