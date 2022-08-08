@@ -16,8 +16,10 @@
 
 <body>
 
-    <?php include("includes/homepage-nav.php"); ?>
-
+    <header>
+        <?php include("includes/homepage-nav.php"); ?>
+    </header>
+    
     <main>
 
         <article class="form-article">

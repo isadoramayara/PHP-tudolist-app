@@ -31,7 +31,9 @@ $row = $row->readItems($_GET['iid']);
 
 <body>
 
-    <?php include("includes/homepage-nav.php"); ?>
+    <header>
+        <?php include("includes/homepage-nav.php"); ?>
+    </header>
     
     <main>
 
@@ -46,9 +48,11 @@ $row = $row->readItems($_GET['iid']);
 
                         <label for="listName">Nome da atividade:</label>
                         <input type="text" maxlength="25" name="itemName" value="<?php echo $row[0]['item_name']?>">
+                        <p class="max-length">MAX: 25 caracteres</p>
 
                         <label for="itemDescription">Descrição:</label>
                         <textarea maxlength="250" name="itemDescription"><?php echo $row[0]['item_description']?></textarea>
+                        <p class="max-length">MAX: 250 caracteres</p>
 
                         <label for="itemProgression">Progresso:</label>
                             <select name="itemProgression" value="<?php echo $row[0]['item_progress']?>">

@@ -6,18 +6,25 @@ class ListValidation extends ListModel
     protected $list_id;
     protected $list_name;
     protected $list_description;
+    protected $deleteList;
 
     // Pega os dados instanciados
-    public function __construct($list_id, $list_name, $list_description)
+    public function __construct($list_id, $list_name, $list_description, $deleteList)
     {
         $this->list_id = $list_id;
         $this->list_name = $list_name;
         $this->list_description = $list_description;
+        $this->deleteList = $deleteList;
     }
 
     // Valida se o formulário está apto a ser lançado
-    public function setList($list_id, $list_name, $list_description)
+    public function setList($list_id, $list_name, $list_description, $deleteList)
     {
+        if($this->deleteRequest($deleteList) == true){       
+            $this->delList($this->list_id = $list_id);
+            header("location: ../../dashboard?uid=" . base64_encode($_SESSION["UID"]) . "&error=none");
+            exit();
+        }
         
         switch(true)
         {
@@ -49,9 +56,11 @@ class ListValidation extends ListModel
 
     }
     
-    public function delList($list_id)
+    public function deleteRequest($deleteList)
     {
-        $this->delList($this->list_id = $list_id);
+        $deleteList = $this->deleteList != 'true' ? false : true;
+
+        return $deleteList;
     }
 
     // Valida se o usuário deixou algum campo vazio ou não
@@ -62,14 +71,14 @@ class ListValidation extends ListModel
         return $notEmpty;
     }
 
-    // Valida se o usuário excedeu no numero de caracteres
+    // Valida se o usuário excedeu o numero de caracteres
     protected function titleMax()
     {
         $itExceeds =  strlen($this->list_name) > 24 ? false : true;
         return $itExceeds;
     }
 
-    // Valida se o usuário excedeu no numero de caracteres
+    // Valida se o usuário excedeu o numero de caracteres
     protected function descMax()
     {
         $itExceeds =  strlen($this->list_description) > 161 ? false : true;

@@ -30,7 +30,9 @@ $rows = $rows->readLists($_GET['lid']);
 
 <body>
 
-    <?php include("includes/homepage-nav.php"); ?>
+    <header>
+        <?php include("includes/homepage-nav.php"); ?>
+    </header>
     
     <main>
 
@@ -41,13 +43,15 @@ $rows = $rows->readLists($_GET['lid']);
 
                     <label for="list-form">
 
-                        <form class="add-list" id="item-form" action="app/handlers/listForm.php?lid=<?php echo $_GET['lid'] ?>" method="POST" autocomplete="off">
+                        <form class="add-list" id="item-form" action="app/handlers/listForm.php?lid=<?php echo $_GET['lid'] ?>" method="POST">
 
-                        <label for="listName">Nome da lista:</label>
+                        <label for="listName">* Nome da lista:</label>
                         <input maxlength="23" type="text"  name="listName" value="<?php echo $rows[0]['list_name']?>">
+                        <p class="max-length">MAX: 23 caracteres</p>
 
                         <label for="itemDescription">Descrição:</label>
                         <textarea maxlength="160" name="listDescription"><?php echo $rows[0]['list_description']?></textarea>
+                        <p class="max-length">MAX: 160 caracteres</p>
 
                         <label><input type="submit" name="submitUpdate" value="Atualizar lista"></label>
             

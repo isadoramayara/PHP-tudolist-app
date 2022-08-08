@@ -43,7 +43,9 @@ $rowFini = array_reverse($rowFini);
 
 <body>
 
-    <?php include("includes/homepage-nav.php"); ?>
+    <header>
+        <?php include("includes/homepage-nav.php"); ?>
+    </header>
 
     <main>
 
@@ -57,6 +59,7 @@ $rowFini = array_reverse($rowFini);
             
             <div class="table-container">
 
+            <!-- TO DO -->
                 <div class="table-header">
                     <h2>A Fazer</h2>
 
@@ -79,6 +82,7 @@ $rowFini = array_reverse($rowFini);
 
                 </div>
 
+                <!-- IN PROGRESS -->
                 <div class="table-header">
                     <h2>Sendo feita</h2>
                     
@@ -101,6 +105,7 @@ $rowFini = array_reverse($rowFini);
 
                 </div>
 
+                <!-- FINISHED -->
                 <div class="table-header">
                     <h2>Finalizadas</h2>
 
@@ -141,6 +146,7 @@ $rowFini = array_reverse($rowFini);
 
 </html>
 
+<!-- JAVASCRIPT -->
 <script text="javascript/text" src="assets/scripts/modal-window.js"></script>
 <script text="javascript/text">
     function deleteItem(item_name, item_id, list_id)

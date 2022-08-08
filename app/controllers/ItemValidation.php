@@ -8,20 +8,28 @@ class ItemValidation extends ItemModel
     protected $item_name;
     protected $item_description;
     protected $item_progress;
+    protected $deleteItem;
 
     // Pega os dados instanciados
-    public function __construct($item_id, $item_name, $item_description, $item_progress, $list_id)
+    public function __construct($item_id, $item_name, $item_description, $item_progress, $list_id, $deleteItem)
     {
         $this->item_id = $item_id;
         $this->list_id = $list_id;
         $this->item_name = $item_name;
         $this->item_description = $item_description;
         $this->item_progress = $item_progress;
+        $this->deleteItem = $deleteItem;
     }
 
     // Valida se o formulário está apto a ser lançado
-    public function setItem($item_id, $item_name, $item_description, $item_progress, $list_id)
+    public function setItem($item_id, $item_name, $item_description, $item_progress, $list_id, $deleteItem)
     {       
+        if($this->deleteRequest($deleteItem, $item_id) == true){       
+            $this->delItem($this->item_id = $item_id,
+                           $this->list_id = $list_id);
+            header("location: ../../todolist?uid=" . base64_encode($_SESSION["UID"]) . "&lid=" . $list_id . "&iid=" . $item_id . "&error=none");
+            exit();
+        }
         
         switch(true)
         {
@@ -61,10 +69,11 @@ class ItemValidation extends ItemModel
 
     }
 
-    public function delItem($list_id, $item_id)
+    public function deleteRequest($deleteItem)
     {
-        $this->delItem($this->list_id = $list_id,
-                       $this->item_id = $item_id);
+        $deleteItem = $this->deleteItem != 'true' ? false : true;
+
+        return $deleteItem;
     }
 
     // Valida se o usuário deixou algum campo vazio ou não

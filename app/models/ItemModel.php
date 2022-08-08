@@ -74,7 +74,7 @@ class ItemModel extends Database
             if(!$stmt->execute(array($item_id)))
             {
                 $stmt = null;
-                header("location: ../../todolist?uid=" . base64_encode($_SESSION["UID"]) . "&lid=" . $list_id . "&iid=" . $item_id . "error=stmtfailed");
+                header("location: ../../todolist?uid=" . base64_encode($_SESSION["UID"]) . "&lid=" . $list_id . "&iid=" . $item_id . "&error=stmtfailed");
                 exit();
             }
             unset($stmt);

@@ -63,9 +63,4 @@ switch (true) {
         break;
 }
 
-/** echo '<style type="text/css">' 
-*            . $style['homepage'] 
-*           . $style['header'] 
-*            . '</style>'; */
-
 ?>

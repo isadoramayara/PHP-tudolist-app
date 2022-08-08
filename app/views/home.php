@@ -14,7 +14,9 @@
 
 <body>
 
-    <?php include("includes/homepage-nav.php"); ?>
+    <header>
+        <?php include("includes/homepage-nav.php"); ?>
+    </header>
 
     <main>
 
@@ -37,6 +39,10 @@
         </article>
 
     </main>
+
+    <footer>
+        <?php ?>
+    </footer>
 
 </body>
 

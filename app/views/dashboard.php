@@ -31,7 +31,9 @@ $rows = array_reverse($rows);
 
 <body>
 
-    <?php include("includes/homepage-nav.php"); ?>
+    <header>
+        <?php include("includes/homepage-nav.php"); ?>
+    </header>
     
     <main>
 
