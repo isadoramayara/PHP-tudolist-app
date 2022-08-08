@@ -44,7 +44,7 @@ class ItemModel extends Database
                 item_id = ?");
                 
             // Se por algum motivo o Model não injetar os dados no DB
-            if(!$stmt->execute(array($item_name, $item_description, $item_progress, $item_id)))
+            if(!$stmt->execute(array($item_name, $item_description, $item_progress, $list_id, $item_id)))
             {
                 $stmt = null;
                 header("location: ../../todolist?uid=" . base64_encode($_SESSION["UID"]) . "&lid=" . $list_id . "error=stmtfailed");
