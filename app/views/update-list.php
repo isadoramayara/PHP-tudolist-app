@@ -12,7 +12,7 @@ if(!isset($_SESSION['UID']) || base64_decode($_GET['uid']) != $_SESSION['UID'])
 require 'app/models/ReadData.php';
 
 $rows = new ReadData($UID);
-$rows = $rows->readLists($_GET['lid']);
+$rows = $rows->readListInfo($_GET['lid']);
 
 ?>
 
